@@ -11,8 +11,7 @@ class Sc2Env(gym.Env):
 	def __init__(self):
 		super(Sc2Env, self).__init__()
 		self.action_space = spaces.Discrete(6)
-		self.observation_space = spaces.Box(low=0, high=255,
-											shape=(224, 224, 3), dtype=np.uint8)
+		self.observation_space = spaces.Box(low=0, high=255,shape=(224, 224, 3), dtype=np.uint8)
 
 	def step(self, action):
 		wait_for_action = True
